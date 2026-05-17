@@ -46,3 +46,27 @@ def registrar_estudiante():
     # Fórmula: Promedio Final = PC01 * 0.2 + PC02 * 0.2 + EP * 0.2 + EF * 0.4
     promedio_final = pc01 * 0.2 + pc02 * 0.2 + ep * 0.2 + ef * 0.4
     print(f"La nota final es: {promedio_final:.2f}.\n")
+    
+    # Registrar faltas y tardanzas
+    while True:
+      clases = int(input("Ingrese el número total de clases: "))
+      if clases > 0:
+        break
+      else:
+        print("El número de clases debe ser mayor que cero. Intente de nuevo.")
+    while True:
+      faltas = int(input("Ingrese el número total de faltas: "))
+      if faltas <= clases:
+        break
+      else:
+        print("El número de faltas no puede ser mayor que el número de clases. Intente de nuevo.")
+    while True:
+      tardanzas = int(input("Ingrese el número total de tardanzas: "))
+      if tardanzas <= clases:
+        break
+      else:
+        print("El número de tardanzas no puedes ser mayor al número de clases. Intente de nuevo.")
+
+    # Calcular faltas equivalentes por tardanzas
+    faltas_por_tardanzas = tardanzas // 2
+    total_faltas = faltas + faltas_por_tardanzas
