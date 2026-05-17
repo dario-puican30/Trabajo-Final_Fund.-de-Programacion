@@ -16,3 +16,29 @@ def registrar_estudiante():
             break
         else:
             print("Nombre inválido. Solo se admiten caracteres de texto. Intente de nuevo.")
+            
+    # Registrar notas pc01, pc02, ep y ef
+    while True:
+      pc01 = float(input("Ingrese la nota de PC01: "))
+      if pc01 <= 20:
+        break
+      else:
+        print("La nota de PC01 no puede ser mayor a 20. Intente de nuevo.")
+    while True:
+      pc02 = float(input("Ingrese la nota de PC02: "))
+      if pc02 <= 20:
+        break
+      else:
+        print("La nota de PC02 no puede ser mayor a 20. Intente de nuevo.")
+    while True:
+      ep = float(input("Ingrese la nota de EP: "))
+      if ep <= 20:
+        break
+      else:
+        print("La nota de EP no puede ser mayor a 20. Intente de nuevo.")
+    while True:
+      ef = float(input("Ingrese la nota de EF: "))
+      if ef <= 20:
+        break
+      else:
+        print("La nota de EF no puede ser mayor a 20. Intente de nuevo.")
