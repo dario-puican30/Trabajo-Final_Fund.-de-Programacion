@@ -120,7 +120,7 @@ def buscar_estudiante():
             print(f"\nEstado Académico: {est['estado']}.\n")
             return
 
-    print("No se encontró el estudiante.\n"
+    print("No se encontró el estudiante.\n")
     
 def mostrar_reporte():
     print("\n--- Reporte general ---")
