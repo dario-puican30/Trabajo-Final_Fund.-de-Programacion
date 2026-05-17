@@ -121,3 +121,17 @@ def buscar_estudiante():
             return
 
     print("No se encontró el estudiante.\n"
+    
+    def mostrar_reporte():
+    print("\n--- Reporte general ---")
+
+    if len(estudiantes) == 0:
+        print("No hay estudiantes registrados.\n")
+        return
+
+    # Estructura repetitiva
+    for est in estudiantes:
+        print(f"Estudiante: {est['nombre']} - Promedio final: {est['promedio_final']:.2f} - Faltas: {est['faltas']} - Tardanzas: {est['tardanzas']} - Estado Académico: {est['estado']}")
+
+    print()
+    
