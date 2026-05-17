@@ -122,7 +122,7 @@ def buscar_estudiante():
 
     print("No se encontró el estudiante.\n"
     
-    def mostrar_reporte():
+def mostrar_reporte():
     print("\n--- Reporte general ---")
 
     if len(estudiantes) == 0:
@@ -135,3 +135,28 @@ def buscar_estudiante():
 
     print()
     
+# ------------------------------
+# Menú principal (estructura repetitiva + selectiva)
+# ------------------------------
+
+while True:
+    print("===== Sistema de Gestión =====")
+    print("1. Registrar estudiante")
+    print("2. Buscar estudiante")
+    print("3. Mostrar reporte")
+    print("4. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    # Estructura selectiva
+    if opcion == "1":
+        registrar_estudiante()
+    elif opcion == "2":
+        buscar_estudiante()
+    elif opcion == "3":
+        mostrar_reporte()
+    elif opcion == "4":
+        print("Saliendo del sistema...")
+        break
+    else:
+        print("Opción inválida. Intente nuevamente.\n")
