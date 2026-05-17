@@ -42,3 +42,7 @@ def registrar_estudiante():
         break
       else:
         print("La nota de EF no puede ser mayor a 20. Intente de nuevo.")
+        
+    # Fórmula: Promedio Final = PC01 * 0.2 + PC02 * 0.2 + EP * 0.2 + EF * 0.4
+    promedio_final = pc01 * 0.2 + pc02 * 0.2 + ep * 0.2 + ef * 0.4
+    print(f"La nota final es: {promedio_final:.2f}.\n")
