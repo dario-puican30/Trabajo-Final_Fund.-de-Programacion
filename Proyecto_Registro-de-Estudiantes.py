@@ -95,3 +95,29 @@ def registrar_estudiante():
     })
 
     print(f"Estudiante {nombre} registrado correctamente.\n")
+    
+    # Estructura repetitiva + cadenas
+# ------------------------------
+
+def buscar_estudiante():
+    print("\n--- Buscar estudiante ---")
+
+    while True:
+        nombre_buscar = input("Ingrese nombre a buscar: ").strip().lower()
+        if nombre_buscar.replace(' ', '').isalpha():
+            break
+        else:
+            print("Nombre de búsqueda inválido. Solo se admiten caracteres de texto. Intente de nuevo.")
+    # Cadenas
+    for est in estudiantes:
+        if est["nombre"].lower() == nombre_buscar:
+            print(f"\nEstudiante: {est['nombre']}")
+            print(f"Notas: {est['notas']}")
+            print(f"Promedio final: {est['promedio_final']:.2f}\n")
+            print(f"Clases: {est['clases']}")
+            print(f"Faltas: {est['faltas']}")
+            print(f"Tardanzas: {est['tardanzas']}")
+            print(f"\nEstado Académico: {est['estado']}.\n")
+            return
+
+    print("No se encontró el estudiante.\n"
