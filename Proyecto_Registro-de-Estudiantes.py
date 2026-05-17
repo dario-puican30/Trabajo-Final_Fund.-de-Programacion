@@ -70,3 +70,28 @@ def registrar_estudiante():
     # Calcular faltas equivalentes por tardanzas
     faltas_por_tardanzas = tardanzas // 2
     total_faltas = faltas + faltas_por_tardanzas
+    
+    # Determinar el estado del estudiante
+    estado_academico = ""
+    if total_faltas >= 0.3 * clases:
+        estado_academico = "Reprobado por faltas (incluyendo tardanzas)"
+        print(f"\nEl estudiante está {estado_academico}.\n")
+    elif promedio_final < 12.5:
+        estado_academico = "Reprobado por nota"
+        print(f"\nEl estudiante está {estado_academico}.\n")
+    else:
+        estado_academico = "Aprobado"
+        print(f"\nEl estudiante está {estado_academico}.\n")
+
+    # Agregar al arreglo principal
+    estudiantes.append({
+        "nombre": nombre,
+        "notas": [pc01, pc02, ep, ef],
+        "promedio_final": promedio_final,
+        "clases": clases,
+        "faltas": faltas,
+        "tardanzas": tardanzas,
+        "estado": estado_academico,
+    })
+
+    print(f"Estudiante {nombre} registrado correctamente.\n")
